@@ -2,7 +2,6 @@
 
 import React, {Component} from 'react'; 
 import {Helmet} from "react-helmet";
-import GoogleMapReact from 'google-map-react';
 
 class PropertyDetail extends Component {
     
@@ -42,7 +41,6 @@ class PropertyDetail extends Component {
                                 <p>
                                     Stasiun Rawa Buaya
                                 </p>
-                                
                             </div>
                         </div>
                     </div>
