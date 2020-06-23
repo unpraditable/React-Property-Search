@@ -2,9 +2,9 @@
 
 import React, {Component} from 'react'; 
 import {Helmet} from "react-helmet";
-
+import { Map, Marker, Popup, TileLayer } from "react-leaflet";
+import { Icon } from "leaflet";
 class PropertyDetail extends Component {
-    
     render() {
         return (
             <div>
@@ -41,6 +41,17 @@ class PropertyDetail extends Component {
                                 <p>
                                     Stasiun Rawa Buaya
                                 </p>
+                                <Map center={[45.4, -75.7]} zoom={12}>
+                                    
+                                <Marker
+                                    key={960}
+                                    position={[
+                                        45.383321536272049,
+                                        -75.3372987731628
+                                    ]}
+                                   
+                                />
+                                </Map>
                             </div>
                         </div>
                     </div>
