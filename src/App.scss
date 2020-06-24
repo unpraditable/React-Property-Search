@@ -62,6 +62,9 @@ $blue : #597cc2;
 .main-banner{
   height: 300px;
   width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
 }
 
 .leaflet-container {
