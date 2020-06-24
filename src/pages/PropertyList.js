@@ -13,8 +13,8 @@ class PropertyList extends Component {
 
         return (
             <div className="property-list-container">
-                <header>
-
+                <header className="header-home">
+                    <h1>Cari Apartemen Impian Anda di Sini!</h1>
                 </header>
                 <div className="container-fluid">
                     <div className="grid-container-2">

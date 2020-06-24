@@ -1,0 +1,142 @@
+{
+    "place" : [
+        {
+            "id" : 0,
+            "name" : "Ciputra International - 1BR",
+            "description" : "Sebuah hunian nyaman dengan tipe Studio ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent, unit ini menawarkan pemandangan Pool dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Gas Stove, Kitchen Set, Refrigerator, TV dan Wardrobe.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/rvyuo945prdxxycslud7.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/xs5lnfphv86hnqgzo5hs.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/nr2wxijajcgxbb7srfsl.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/aptxpb6d4lgjxtajxglz.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/zlturt3rqtepnpv6udnt.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Lkr. Luar Barat No. 101",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.729023,
+                "latitude" : -6.175121
+            }
+        },
+        {
+            "id" : 1,
+            "name" : "Ciputra International - Studio",
+            "description" : "Sebuah hunian nyaman dengan tipe Studio ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent, unit ini menawarkan pemandangan City dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Gas Stove, Kitchen Set, Refrigerator, TV dan Water Heater.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Water Heater"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/ndau3ati79uh6cnrmwhq.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/zw8moow4gsulknw9y17c.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/rifaecpyvdsdodzxqxmf.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/fjdbqlwtqxhrsaequzqm.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/b8pt6qjfi1zs4vpapwbb.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Lkr. Luar Barat No.8, Duri Kosambi, Cengkareng",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.726383,
+                "latitude" : -6.157778
+            }
+        },
+        {
+            "id" : 2,
+            "name" : "Wisma 46",
+            "description" : "Wisma 46 adalah bangunan kantor tipe Grade A yang terletak di Central Business District (Pusat Kawasan Bisnis), jantung kota Jakarta. Dengan total luas bangunan 87.000 m2, bangunan kantor beralamat di Jl. Jend Sudirman Kav 1 tersedia untuk sewa.",
+            "facilities" : [
+                "ATM", "Restoran", "Bank", "Minimarket"
+            ],
+            "type" : "office",
+            "images" : {
+                "primary" : "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/134_wisma-46-wisma-46_20160914044740_68427.jpg",
+            },
+            "address" : {
+                "street" : "Jl. Jend Sudirman Kav 1",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.726383,
+                "latitude" : -6.157778
+            }
+        },
+        {
+            "id" : 3,
+            "name" : "Satrio Tower",
+            "description" : "Satrio Tower adalah bangunan kantor baru tipe Grade A yang terletak di Central Business District (Pusat Kawasan Bisnis), jantung kota Jakarta. Dengan total luas bangunan 32.000 m2, bangunan kantor beralamat di Jl. Prof.Dr. Satrio C4 tersedia untuk sewa.",
+            "facilities" : [
+                "ATM", "Bank"
+            ],
+            "type" : "office",
+            "images" : {
+                "primary" : "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/85_satrio-tower-satrio-tower_20160914044537_38987.JPG",
+            },
+            "address" : {
+                "street" : "Jl. Prof.Dr. Satrio C4",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.828353,
+                "latitude" : -6.225194
+            }
+        },
+        {
+            "id" : 4,
+            "name" : "Brooklyn - 1BR",
+            "description" : "Sebuah hunian nyaman dengan tipe 1BR ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent & buy, unit ini menawarkan pemandangan City dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Electric Stove, Kitchen Set, Refrigerator, Sofa, TV, Wardrobe dan Water Heater.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Dining Table", "Wardrobe"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/dtv1yjfno87qghn7v7oi.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/trkmur7xzghezrykw5zf.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/zv2tymoz9wrdvlhnvcma.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/t8pqofmzq6ataky5r2td.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/szyynna67twwrtgfd0n4.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Sutera Olivia III",
+                "city" : "Tangerang Selatan",
+                "country" : "Indonesia",
+                "longitude" : 106.657768,
+                "latitude" : -6.237635
+            }
+        },
+        {
+            "id" : 5,
+            "name" : "Gading Icon The Rosewood - 2BR",
+            "description" : "Sebuah hunian nyaman dengan tipe 1BR ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent & buy, unit ini menawarkan pemandangan City dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Electric Stove, Kitchen Set, Refrigerator, Sofa, TV, Wardrobe dan Water Heater.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Dining Table", "Wardrobe"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/whmnj74oidetanwguebv.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/owabmssirrycqsatyino.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/cvak8mahxou0w9zuxx65.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/rc1yyjamijux0aezafd6.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/riutaatqn3oqwo6ovnef.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Perintis Kemerdekaan Kav. 99",
+                "city" : "Tangerang Selatan",
+                "country" : "Indonesia",
+                "longitude" : 106.904490,
+                "latitude" : -6.181112
+            }
+        }
+    ]
+}

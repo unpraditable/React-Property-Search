@@ -1,18 +1,27 @@
 //variables
 
 $blue : #597cc2;
-
+$darkBlue : darken($blue, 30%);
 
 //reusable components
 .container {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .container-fluid {
   margin: 15px;
+}
+
+.header-home{
+  background-color: $darkBlue;
+  text-align: center;
+  padding: 30px 0;
+  h1{
+    margin: 0;
+    color: white;
+  }
 }
 
 @media only screen and (max-width: 1199px) {
@@ -141,41 +150,5 @@ $blue : #597cc2;
     background-color: $blue;
     border-radius: 4px;
     text-decoration: none;
-  }
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
   }
 }
