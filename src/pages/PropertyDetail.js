@@ -1,5 +1,3 @@
-//this page is for browse movie page, like for Top Movies and Popular Movies, also Search Results Page. Renders Movie Card Page and paginations
-
 import React, {Component} from 'react'; 
 import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";

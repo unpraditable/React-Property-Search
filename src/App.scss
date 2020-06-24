@@ -11,45 +11,49 @@ $blue : #597cc2;
 
 }
 
+.container-fluid {
+  margin: 15px;
+}
+
 @media only screen and (max-width: 1199px) {
   .container {
-      max-width: 960px;
+    max-width: 960px;
   }
 }
 
 @media only screen and (max-width: 991px) {
   .container {
-      max-width: 720px;
+    max-width: 720px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .container {
-      max-width: 540px;
+    max-width: 540px;
   }
 }
 
 @media only screen and (max-width: 575px) {
   .container {
-      max-width: 100%;
-      margin: 0 15px;
+    max-width: 100%;
+    margin: 0 15px;
   }
 }
 
-.list-unstyled{
+.list-unstyled {
   padding: 0;
   list-style: none;
 }
 
-.grid-container-2{
+.grid-container-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10px;
+  grid-gap: 15px;
 }
 
 //specific components
-.facilities-list{
-  li{
+.facilities-list {
+  li {
     display: inline-block;
     background-color: $blue;
     color: white;
@@ -59,7 +63,7 @@ $blue : #597cc2;
   }
 }
 
-.main-banner{
+.main-banner {
   height: 300px;
   width: 100%;
   background-repeat: no-repeat;
@@ -70,6 +74,74 @@ $blue : #597cc2;
 .leaflet-container {
   width: 100%;
   height: 400px;
+}
+
+.property-list-container {
+  .leaflet-container {
+    height: 100vh;
+  }
+}
+
+.property-card {
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  &:hover {
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .img-container {
+    img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+  }
+
+  .property-desc {
+    margin: 15px;
+
+    h3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .desc {
+      height: 45px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+}
+
+.city-row{
+  margin: 0 15px;
+  color: $blue;
+  p{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+  .paper-plane-icon{
+    width: 15px;
+    margin-right: 5px;
+  }
+}
+
+.button-row{
+  margin: 0 15px 15px;
+  text-align: right;
+  .link-button{
+    padding: 4px 16px;
+    color: white;
+    background-color: $blue;
+    border-radius: 4px;
+    text-decoration: none;
+  }
 }
 
 .App-logo {
@@ -107,4 +179,3 @@ $blue : #597cc2;
     transform: rotate(360deg);
   }
 }
-
