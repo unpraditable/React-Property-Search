@@ -5,7 +5,14 @@ import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 class PropertyDetail extends Component {
+    state = {
+        lat: -6.173498,
+        lng: 106.728643,
+        zoom: 17,
+    }
     render() {
+        const position = [this.state.lat, this.state.lng];
+
         return (
             <div>
                 <div 
@@ -41,16 +48,28 @@ class PropertyDetail extends Component {
                                 <p>
                                     Stasiun Rawa Buaya
                                 </p>
-                                <Map center={[45.4, -75.7]} zoom={12}>
+                                <Map center={position} zoom={this.state.zoom}>
                                     
-                                <Marker
-                                    key={960}
-                                    position={[
-                                        45.383321536272049,
-                                        -75.3372987731628
-                                    ]}
-                                   
-                                />
+                                    <TileLayer
+                                        attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                    />
+
+                                    <Marker 
+                                        position={position}
+                                        onMouseOver={(e) => {
+                                            e.target.openPopup();
+                                        }}
+                                        onMouseOut={(e) => {
+                                            e.target.closePopup();
+                                        }}
+                                    >
+                                        <Popup>
+                                            <strong>Apt A</strong><br></br>
+                                            14, RT.14/RW.4, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740
+                                        </Popup>
+                                    </Marker>
+                                
                                 </Map>
                             </div>
                         </div>
