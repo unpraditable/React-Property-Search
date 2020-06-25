@@ -8,8 +8,8 @@ class PropertyList extends Component {
 
     state = {
         places: [],
-        lat: 0,
-        lng: 0,
+        lat: -6.194925,
+        lng: 106.723789,
         zoom: 17,
     }
 
@@ -37,9 +37,13 @@ class PropertyList extends Component {
                 data = data.filter(place=>place.name.toLowerCase().includes(searchTitle))
             }
 
-            if(data){
-                var lat = data[0].address.latitude;
-                var long = data[0].address.longitude;
+            //set lat and long default value to a proper value
+            var lat = -6.194925
+            var long = 106.723789;
+
+            if(data[0]){
+                lat = data[0].address.latitude;
+                long = data[0].address.longitude;
             }
 
             //function to set state of places with data
