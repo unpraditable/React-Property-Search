@@ -16,7 +16,7 @@ class PropertyDetail extends Component {
         axios.get(`https://api.jsonbin.io/b/5ef42476e2ce6e3b2c793944`)
         .then(res => {
             //sebenarnya, untuk ini seharusnya menggunakan find karena hanya butuh satu objek saja, tapi karena terus menemuii error ketika hendak print nilai nested object, maka jadi pakai cara filter
-            var places = res.data.place.filter(place => place.id == parseInt(placeSlug));
+            var places = res.data.place.filter(place => place.id === parseInt(placeSlug));
 
             this.setState({ 
                 place: places,

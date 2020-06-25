@@ -1,33 +1,9 @@
 import React, {Component} from 'react'; 
-import axios from 'axios';
 
 class PropertyCard extends Component {
-    state = {
-        apartments: [],
-        offices: [],
-    }
-
-    componentDidMount() {
-        //execute this code to retrieve the data of offices and apartments from the API
-        axios.get(`https://api.jsonbin.io/b/5ef42476e2ce6e3b2c793944`)
-        .then(res => {
-            const apartments = res.data.place.filter(place => place.type === "apartment");
-            const offices = res.data.place.filter(place => place.type === "office")
-
-            this.setState({ 
-                apartments: apartments,
-                offices: offices
-            });
-        })
-    }
+    
     render() {
-        var data = [];
-        if(this.props.type === "office") {
-            data = this.state.offices
-        }
-        if(this.props.type === "apartment") {
-            data = this.state.apartments
-        }
+        const data = this.props.data;
         return (
             
             <ul className={`property-list list-unstyled ${this.props.containerClass}`}>
