@@ -4,6 +4,8 @@ import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 import PropertyCard from "../components/PropertyCard";
+import SearchSelectProperty from "../components/SearchSelectProperty";
+
 class PropertyList extends Component {
 
     state = {
@@ -56,36 +58,15 @@ class PropertyList extends Component {
     }
     render() {
         let places = this.state.places
-
-        //function to search with search box
-        var search = function (e) {
-            let searchQuery = document.getElementById('searchForm').value;
-            let selectedType = document.getElementById('selectType').value;
-
-            e.preventDefault();
-            if(selectedType === "apartment"){
-                window.location.href=`/apartment?name=${searchQuery}`;
-            }
-            if(selectedType === "office"){
-                window.location.href=`/office?name=${searchQuery}`;
-            }
-        }
-
         const firstPlace = Object.keys(places)[0];
         const position = [this.state.lat, this.state.lng];
 
         return (
             <div className="property-list-container">
                 <header className="header-home">
+                    
                     <h1>Cari Apartemen Impian Anda di Sini!</h1>
-                    <form  onSubmit={search.bind(this)}>
-                        <input id="searchForm" placeholder="Cari properti Anda di sini..."></input>
-                    </form>
-
-                    <select id="selectType">
-                        <option value="apartment">Apartment</option>
-                        <option value="office">Office</option>
-                    </select>
+                    <SearchSelectProperty />
                 </header>
                 <div className="container-fluid">
                     <div className="grid-container-2">

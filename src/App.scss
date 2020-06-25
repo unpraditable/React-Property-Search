@@ -62,6 +62,12 @@ $darkBlue : darken($blue, 30%);
 }
 
 //specific components
+.search-select{
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+}
+
 .facilities-list {
   li {
     display: inline-block;
