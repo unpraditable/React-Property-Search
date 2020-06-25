@@ -21,7 +21,7 @@ class PropertyList extends Component {
                     <div className="grid-container-2">
                         <div className="grid-item">
                             <PropertyCard containerClass="grid-container-2"
-                            type="apartment"
+                            type={`${this.props.type}`}
                             />
                             
                         </div>

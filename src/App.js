@@ -17,7 +17,10 @@ function App() {
     <Router basename="/apartment">
       <div className="App">
         <Route exact path="/">
-          <PropertyList />
+          <PropertyList type="apartment" />
+        </Route>
+        <Route exact path="/office">
+          <PropertyList type="office" />
         </Route>
         
         {/* I use switch for nested routes, so those components will be rendered inclusively and it will be helpful for nested URLs */}
