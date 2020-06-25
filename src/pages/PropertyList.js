@@ -43,14 +43,26 @@ class PropertyList extends Component {
         const searchTitle = parsedQueryString.name;
 
         //function to search based on keywords
-        places = places.filter(place=>place.name.toLowerCase().includes(searchTitle))
+        if(searchTitle){
+            places = places.filter(place=>place.name.toLowerCase().includes(searchTitle))
 
-        
+        }
+
+        //function to search with search box
+        var search = function (e) {
+            let searchQuery = document.getElementById('searchForm').value;
+            e.preventDefault();
+            window.location.href=`?name=${searchQuery}`;
+        }
 
         return (
             <div className="property-list-container">
                 <header className="header-home">
                     <h1>Cari Apartemen Impian Anda di Sini!</h1>
+                    <form  onSubmit={search.bind(this)}>
+                        <input id="searchForm" placeholder="Cari properti Anda di sini..."></input>
+                    </form>
+                    
                 </header>
                 <div className="container-fluid">
                     <div className="grid-container-2">
@@ -58,7 +70,6 @@ class PropertyList extends Component {
                             <PropertyCard containerClass="grid-container-2"
                             type={`${this.props.type}`}
                             data={places}
-                            searchName=""
                             />
                             
                         </div>
