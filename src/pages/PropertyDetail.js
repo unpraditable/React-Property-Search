@@ -2,40 +2,64 @@ import React, {Component} from 'react';
 import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
+import axios from 'axios';
+
 class PropertyDetail extends Component {
     state = {
-        lat: -6.173498,
-        lng: 106.728643,
-        zoom: 17,
+        place: [],
+        zoom: 16,
+    }
+    componentDidMount() {
+        const placeSlug = this.props.match.params.propertyId;
+
+        //execute this code to retrieve the data of offices and apartments from the API
+        axios.get(`https://api.jsonbin.io/b/5ef42476e2ce6e3b2c793944`)
+        .then(res => {
+            //sebenarnya, untuk ini seharusnya menggunakan find karena hanya butuh satu objek saja, tapi karena terus menemuii error ketika hendak print nilai nested object, maka jadi pakai cara filter
+            var places = res.data.place.filter(place => place.id == parseInt(placeSlug));
+
+            this.setState({ 
+                place: places,
+            });
+        })
+
     }
     render() {
-        const position = [this.state.lat, this.state.lng];
+
+        var data = this.state.place[0];
 
         return (
             <div>
+                {this.state.place.map(place =>
                 <div 
                     className="main-banner" 
-                    style={{ backgroundImage: `url(https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/salkfpugoj6reihn7qmj.jpg)` }}
-                >
-                    
-                </div>
+                    style={{ backgroundImage: `url(${place.images.primary})` }}
+                ></div>
+                )}
+                                    
                 <div className="container">
-                    <h1>Apt A</h1> 
-                    <div className="grid-container-2">
+
+                    {this.state.place.map(place => 
+                        <h1>{place.name}</h1> 
+                    )}
+
+                    {this.state.place.map(place => 
+
+                        <div className="grid-container-2">
                         <div className="grid-item">
                             <div className="row">
                                 <h3>Description</h3>
                                 <article>
-                                    Sebuah hunian nyaman dengan tipe 1BR ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent, unit ini menawarkan pemandangan City dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Gas Stove, Kitchen Set, Oven, Refrigerator, Sofa, TV, Wardrobe dan Water Heater.
+                                    {place.description}
                                 </article>
                             </div>
                             <div className="row">
                                 <h3>Facilities</h3>
                                 <ul className="list-unstyled facilities-list">
-                                    <li>Swimming Pool</li>
-                                    <li>Tennis Court</li>
-                                    <li>Squash Court</li>
-
+                                    {place.facilities.map(facility =>
+                                        <li>{facility}</li>
+                                    ) 
+                                    }
                                 </ul>
                             </div>
                             
@@ -44,9 +68,9 @@ class PropertyDetail extends Component {
                             <div className="row">
                                 <h3>Location</h3>
                                 <p>
-                                    Stasiun Rawa Buaya
+                                    {place.address.street}
                                 </p>
-                                <Map center={position} zoom={this.state.zoom}>
+                                <Map center={[place.address.latitude, place.address.longitude]} zoom={this.state.zoom}>
                                     
                                     <TileLayer
                                         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -54,7 +78,7 @@ class PropertyDetail extends Component {
                                     />
 
                                     <Marker 
-                                        position={position}
+                                        position={[place.address.latitude, place.address.longitude]}
                                         onMouseOver={(e) => {
                                             e.target.openPopup();
                                         }}
@@ -63,8 +87,8 @@ class PropertyDetail extends Component {
                                         }}
                                     >
                                         <Popup>
-                                            <strong>Apt A</strong><br></br>
-                                            14, RT.14/RW.4, Rw. Buaya, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11740
+                                            <strong>{place.name}</strong><br></br>
+                                            {place.address.street}
                                         </Popup>
                                     </Marker>
                                 
@@ -72,7 +96,7 @@ class PropertyDetail extends Component {
                             </div>
                         </div>
                     </div>
-                    
+                    )}                    
                 </div>
             </div>
             

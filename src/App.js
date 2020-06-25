@@ -16,12 +16,15 @@ function App() {
   return (
     <Router basename="/apartment">
       <div className="App">
-      <Route path="/">
+        <Route exact path="/">
           <PropertyList />
         </Route>
-        <Route path="/detail">
-          <PropertyDetail />
-        </Route>
+        
+        {/* I use switch for nested routes, so those components will be rendered inclusively and it will be helpful for nested URLs */}
+        <Switch>
+          <Route path="/place/:propertyId" component={PropertyDetail}>
+          </Route>
+        </Switch>
       </div>
     </Router>
     

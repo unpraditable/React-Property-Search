@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
+import PropertyCard from "../components/PropertyCard";
 class PropertyList extends Component {
     state = {
         lat: -6.173498,
@@ -19,76 +20,9 @@ class PropertyList extends Component {
                 <div className="container-fluid">
                     <div className="grid-container-2">
                         <div className="grid-item">
-                            <div className="row grid-container-2">
-                                <div className="property-card">
-                                    <div className="img-container">
-                                        <img src="https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/rvyuo945prdxxycslud7.jpg" alt="Property Name" />
-                                    </div>
-                                    <div className="row property-desc">
-                                        <h3>Studio - Tower Amsterdam</h3>
-                                        <p className="desc">Sebuah hunian nyaman dengan tipe Studio ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent, unit ini menawarkan pemandangan Pool dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Gas Stove, Kitchen Set, Refrigerator, TV dan Wardrobe.</p>
-                                    </div>
-                                    <div className="row city-row">
-                                        <p><img className="paper-plane-icon" src={process.env.PUBLIC_URL + '/paper-plane.svg'} />Jakarta, Indonesia</p>
-                                    </div>
-                                    <div className="row button-row">
-                                        <a className="link-button" href="#">
-                                            Detail
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="property-card">
-                                    <div className="img-container">
-                                        <img src="https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/rvyuo945prdxxycslud7.jpg" alt="Property Name" />
-                                    </div>
-                                    <div className="row property-desc">
-                                        <h3>Studio - Tower Amsterdam</h3>
-                                        <p className="desc">Sebuah hunian nyaman dengan tipe Studio ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent, unit ini menawarkan pemandangan Pool dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Gas Stove, Kitchen Set, Refrigerator, TV dan Wardrobe.</p>
-                                    </div>
-                                    <div className="row city-row">
-                                        <p><img className="paper-plane-icon" src={process.env.PUBLIC_URL + '/paper-plane.svg'} />Jakarta, Indonesia</p>
-                                    </div>
-                                    <div className="row button-row">
-                                        <a className="link-button" href="#">
-                                            Detail
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="property-card">
-                                    <div className="img-container">
-                                        <img src="https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/rvyuo945prdxxycslud7.jpg" alt="Property Name" />
-                                    </div>
-                                    <div className="row property-desc">
-                                        <h3>Studio - Tower Amsterdam</h3>
-                                        <p className="desc">Sebuah hunian nyaman dengan tipe Studio ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent, unit ini menawarkan pemandangan Pool dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Gas Stove, Kitchen Set, Refrigerator, TV dan Wardrobe.</p>
-                                    </div>
-                                    <div className="row city-row">
-                                        <p><img className="paper-plane-icon" src={process.env.PUBLIC_URL + '/paper-plane.svg'} />Jakarta, Indonesia</p>
-                                    </div>
-                                    <div className="row button-row">
-                                        <a className="link-button" href="#">
-                                            Detail
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="property-card">
-                                    <div className="img-container">
-                                        <img src="https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/rvyuo945prdxxycslud7.jpg" alt="Property Name" />
-                                    </div>
-                                    <div className="row property-desc">
-                                        <h3>Studio - Tower Amsterdam</h3>
-                                        <p className="desc">Sebuah hunian nyaman dengan tipe Studio ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent, unit ini menawarkan pemandangan Pool dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Gas Stove, Kitchen Set, Refrigerator, TV dan Wardrobe.</p>
-                                    </div>
-                                    <div className="row city-row">
-                                        <p><img className="paper-plane-icon" src={process.env.PUBLIC_URL + '/paper-plane.svg'} />Jakarta, Indonesia</p>
-                                    </div>
-                                    <div className="row button-row">
-                                        <a className="link-button" href="#">
-                                            Detail
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <PropertyCard containerClass="grid-container-2"
+                            type="apartment"
+                            />
                             
                         </div>
                         <div className="grid-item">
