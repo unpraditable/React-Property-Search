@@ -58,8 +58,14 @@
                 "ATM", "Restoran", "Bank", "Minimarket"
             ],
             "type" : "office",
+            
             "images" : {
                 "primary" : "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/134_wisma-46-wisma-46_20160914044740_68427.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_anteoculatia/office/wisma_46_interior_img_4219.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_anteoculatia/office/wisma_46_interior_img_4220.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/134_wisma-46-wisma-46_20160914044741_50362.jpg"
+                ]
             },
             "address" : {
                 "street" : "Jl. Jend Sudirman Kav 1",
@@ -79,6 +85,12 @@
             "type" : "office",
             "images" : {
                 "primary" : "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/85_satrio-tower-satrio-tower_20160914044537_38987.JPG",
+                "others" : [
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/85_satrio-tower-satrio-tower_20170320063006_82185.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/85_satrio-tower-satrio-tower_20170320063008_70142.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/85_satrio-tower-satrio-tower_20170411094521_29252.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/85_satrio-tower-satrio-tower_20170411094527_95573.jpg"
+                ]
             },
             "address" : {
                 "street" : "Jl. Prof.Dr. Satrio C4",
@@ -132,10 +144,264 @@
             },
             "address" : {
                 "street" : "Jl. Perintis Kemerdekaan Kav. 99",
-                "city" : "Tangerang Selatan",
+                "city" : "Jakarta",
                 "country" : "Indonesia",
                 "longitude" : 106.904490,
                 "latitude" : -6.181112
+            }
+        },
+        {
+            "id" : 6,
+            "name" : "Central Park Residence Tower",
+            "description" : "Sebuah hunian nyaman dengan tipe 1BR ini memiliki beragam faktor pendukung yang membuat hunian semakin nyaman. Tersedia untuk rent, unit ini menawarkan pemandangan City dengan kondisi Full Furnished yang terdiri dari AC, Bed, Dining Table, Gas Stove, Kitchen Set, Microwave, Refrigerator, Sofa, TV, Wardrobe dan Water Heater.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Dining Table", "Wardrobe"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/r8zvbi3lc5hja85wes5c.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/lfblkdvgttougagmghxb.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/vsviamvzdsl8mpsmhmi9.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/faf4mrlled9ayabwwnyx.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/swfrlvnhgkpu9dwoecgp.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Letjen S.Parman Kav. 28",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.790023,
+                "latitude" : -6.174441
+            }
+        },
+        {
+            "id" : 7,
+            "name" : "Springwood Residence",
+            "description" : "SpringWood Residence berlokasi di Jl. M.H. Thamrin RT.002/RW.001. Apartemen ini dikembangkan oleh Triniti Land Property,SpringWood Residence memiliki 1 tower. Dalam kompleks ini tersedia beragam fasilitas untuk mendukung hunian Anda, Terdapat pula beragam sarana dan fasilitas yang menjamin kenyamanan hunian Anda, seperti: Access Card, Bbq Pit, Function Hall, Gym, Jogging Track, Laundry, Mini Market, Playground, Sauna dan Swimming Pool.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Dining Table", "Wardrobe"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/jw0d5fqznvtz2ff82qfm.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/maow8z8fe6mrigtlegtr.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/fcy2xxpwavo22irw3fuw.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/n20sakscd2pxjokloffk.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/th9kopvrlpqntnyrzl1a.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. M.H. Thamrin RT.002/RW.001",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.637053,
+                "latitude" : -6.224700
+            }
+        },
+        {
+            "id" : 8,
+            "name" : "88 Kota Kasablanka Tower A",
+            "description" : "88 Kota Kasablanka Tower A adalah bangunan kantor tipe Premium yang terletak di Jakarta Selatan. 88 Kota Kasablanka Tower A adalah satu dari 4 bangunan kantor di Kota Kasablanka. Dengan total luas bangunan 31.430 m2, bangunan kantor beralamat di Jl. Casablanca Raya No. 88 tersedia untuk strata dan sewa.",
+            "facilities" : [
+                "ATM", "Bank", "Minimarket", "Restoran"
+            ],
+            "type" : "office",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_anteoculatia/building/l5gbrignxvfxcntdledk",
+                "others" : [
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/248_kota-kasablanka-88-kasablanka-tower-a_20170214042625_12353.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/248_kota-kasablanka-88-kasablanka-tower-a_20170214042625_83286.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/248_kota-kasablanka-88-kasablanka-tower-a_20170214042624_47835.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/248_kota-kasablanka-88-kasablanka-tower-a_20170214042623_61601.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/248_kota-kasablanka-88-kasablanka-tower-a_20170214042622_99132.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Casablanca Raya No. 88",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.897797,
+                "latitude" : -6.158162
+            }
+        },
+        {
+            "id" : 9,
+            "name" : "Menteng Park",
+            "description" : "Menteng Park berlokasi di Jl. Cikini Raya No. 79. Apartemen ini dikembangkan oleh Agung Sedayu Group,Menteng Park memiliki 3 tower. Dalam kompleks ini tersedia beragam fasilitas untuk mendukung hunian Anda, Terdapat pula beragam sarana dan fasilitas yang menjamin kenyamanan hunian Anda, seperti: Access Card, Atm Center, Drug Store, Function Hall, Gym, Jogging Track, Laundry, Mini Market, Playground, Private Lift, Restaurant, Salon dan Swimming Pool.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Dining Table", "Wardrobe"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/pfemuhch1l7nkhplcs4g.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/s9yz9i5dy6yaxh3uw2ke.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/p8o9jorh8ogqcyguadib.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/x8ub4kq9nglsagellyji.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/hw0mvnw8frhcyxvybqe3.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Cikini Raya No. 79",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.838925,
+                "latitude" : -6.191877
+            }
+        },
+        {
+            "id" : 10,
+            "name" : "Gading Nias",
+            "description" : "Gading Nias berlokasi di Jl. Gading Nias Tim. RT.13/RW.3. Apartemen ini dikembangkan oleh PT. Tiara Metropolitan Jaya (Agung Podomoro Group),Gading Nias memiliki 6 tower. Dalam kompleks ini tersedia beragam fasilitas untuk mendukung hunian Anda, Terdapat pula beragam sarana dan fasilitas yang menjamin kenyamanan hunian Anda, seperti: Atm Center, Laundry, Playground, Restaurant dan Salon.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Dining Table", "Wardrobe"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/mwdklcvxesk3okejiovk.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/du39dyajtvkzh3phio0y.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/hxn3txitpcd7ljq4orvr.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/bpjoc9trm2ecmpjuj0pt.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/sduahnl7lqmt65xszr2g.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Gading Nias Tim. RT.13/RW.3",
+                "city" : "Jakarta Utara",
+                "country" : "Indonesia",
+                "longitude" : 106.914114,
+                "latitude" : -6.154093
+            }
+        },
+        {
+            "id" : 11,
+            "name" : "Casa Grande Residence",
+            "description" : "Casa Grande Residence berlokasi di Jl. Casablanca Kav. 88. Apartemen ini dikembangkan oleh Pakuwon Group,Casa Grande Residence memiliki 7 tower. Dalam kompleks ini tersedia beragam fasilitas untuk mendukung hunian Anda, Terdapat pula beragam sarana dan fasilitas yang menjamin kenyamanan hunian Anda, seperti: Access Card, Function Hall, Gym, Jogging Track, Laundry, Playground, Private Lift dan Swimming Pool.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Dining Table", "Wardrobe"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/qqh51akl8tg1cckjbls5.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/dtnybnzhmlifd8yzllxh.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/u4xhzsk2bv8vpok3myh9.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/iqsubkdpesxmn8db0lb4.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/wlspew0vjg9pazxivnmb.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Casablanca Kav. 88",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.841988,
+                "latitude" : -6.223772
+            }
+        },
+        {
+            "id" : 12,
+            "name" : "The Plaza",
+            "description" : "The Plaza adalah bangunan kantor tipe Premium yang terletak di Central Business District (Pusat Kawasan Bisnis), jantung kota Jakarta. Dengan total luas bangunan 56.447 m2, bangunan kantor beralamat di Jl. M.H. Thamrin No. 28-30 tersedia untuk sewa.",
+            "facilities" : [
+                "ATM", "Bank", "Minimarket", "Restoran"
+            ],
+            "type" : "office",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_anteoculatia/office/t5simjg9sif3lf1gemdb",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_anteoculatia/office/the_plaza_interior_img20171101110753.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_anteoculatia/office/the_plaza_interior_img20171102120050.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/159_the-plaza-the-plaza_20160914044731_88916.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_anteoculatia/office/the_plaza_interior_img20171102130853.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_anteoculatia/office/the_plaza_interior_img20171102132245.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. M.H. Thamrin No. 28-30",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.822161,
+                "latitude" : -6.191924
+            }
+        },
+        {
+            "id" : 13,
+            "name" : "Gandaria Heights",
+            "description" : "Gandaria Heights berlokasi di Jl. Gandaria No. 8. Apartemen ini dikembangkan oleh Pakuwon Group,Gandaria Heights memiliki 2 tower. Dalam kompleks ini tersedia beragam fasilitas untuk mendukung hunian Anda, Terdapat pula beragam sarana dan fasilitas yang menjamin kenyamanan hunian Anda, seperti: Atm Center, Bbq Pit, Drug Store, Function Hall, Gym, Jogging Track, Laundry, Movie Theater, Playground, Restaurant, Salon, Sauna, Super Market, Swimming Pool dan Tennis Court.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Dining Table", "Wardrobe"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/ku54xzwd4nt3b4jhxc8d.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/w1wfrqv7ofdj1yfepljf.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/jkvr4keakyatvrvoz7hx.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/pox5yu6mbev9ylojmukq.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/oqkgncnpstlz4woiogwl.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Gandaria No. 8",
+                "city" : "Jakarta Selatan",
+                "country" : "Indonesia",
+                "longitude" : 106.791136,
+                "latitude" : -6.249322
+            }
+        },
+        {
+            "id" : 14,
+            "name" : "Tempo Scan Tower",
+            "description" : "Tempo Scan Tower adalah bangunan kantor tipe Grade A yang terletak di Central Business District (Pusat Kawasan Bisnis), jantung kota Jakarta. Dengan total luas bangunan 43.062 m2, bangunan kantor beralamat di Jl. HR. Rasuna Said Kav 3 - 4 tersedia untuk sewa.",
+            "facilities" : [
+                "ATM", "Bank", "Minimarket", "Restoran"
+            ],
+            "type" : "office",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_anteoculatia/office/t5simjg9sif3lf1gemdb",
+                "others" : [
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/63_tempo-scan-tower-tempo-scan-tower_20170331102609_28773.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/63_tempo-scan-tower-tempo-scan-tower_20170331102610_98125.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/63_tempo-scan-tower-tempo-scan-tower_20170331102610_39883.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/63_tempo-scan-tower-tempo-scan-tower_20170331102610_75164.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/63_tempo-scan-tower-tempo-scan-tower_20170331102611_85653.jpg",
+                    "https://image2.sewakantorcbd.com/800x0/upload/office-leasing/building-photos/63_tempo-scan-tower-tempo-scan-tower_20170331102612_75530.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. HR. Rasuna Said Kav 3 - 4",
+                "city" : "Jakarta",
+                "country" : "Indonesia",
+                "longitude" : 106.829208,
+                "latitude" : -6.235279
+            }
+        },
+        {
+            "id" : 15,
+            "name" : "The Nest",
+            "description" : "The Nest berlokasi di Jl. Raden Saleh RT.1/RW.6. Apartemen ini dikembangkan oleh PT. Karya Cipta Sukses Anugrah,The Nest memiliki 5 tower. Dalam kompleks ini tersedia beragam fasilitas untuk mendukung hunian Anda, Terdapat pula beragam sarana dan fasilitas yang menjamin kenyamanan hunian Anda, seperti: Access Card, Atm Center, Bbq Pit, Drug Store, Gym, Jogging Track, Laundry, Mini Market, Playground, Restaurant, Salon dan Swimming Pool.",
+            "facilities" : [
+                "AC", "Kompor", "Listrik", "Kasur", "Kulkas", "Dining Table", "Wardrobe"
+            ],
+            "type" : "apartment",
+            "images" : {
+                "primary" : "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/oh2rbpq2tmr1nrxinlje.jpg",
+                "others" : [
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/cmhvkoj14sfuzaqyuwdo.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/pbe1wch1gefidi3pavqo.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/jgu7vvxvdvk3tfic1m6x.jpg",
+                    "https://res.cloudinary.com/dpqdlkgsz/image/private/t_aparecium_minima/building/oq8wx4yk650izzbfi4j1.jpg"
+                ]
+            },
+            "address" : {
+                "street" : "Jl. Raden Saleh RT.1/RW.6",
+                "city" : "Tangerang",
+                "country" : "Indonesia",
+                "longitude" : 106.723789,
+                "latitude" : -6.194850
             }
         }
     ]
