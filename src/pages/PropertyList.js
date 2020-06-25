@@ -51,8 +51,15 @@ class PropertyList extends Component {
         //function to search with search box
         var search = function (e) {
             let searchQuery = document.getElementById('searchForm').value;
+            let selectedType = document.getElementById('selectType').value;
+
             e.preventDefault();
-            window.location.href=`?name=${searchQuery}`;
+            if(selectedType === "apartment"){
+                window.location.href=`/apartment?name=${searchQuery}`;
+            }
+            if(selectedType === "office"){
+                window.location.href=`/office?name=${searchQuery}`;
+            }
         }
 
         return (
@@ -62,7 +69,11 @@ class PropertyList extends Component {
                     <form  onSubmit={search.bind(this)}>
                         <input id="searchForm" placeholder="Cari properti Anda di sini..."></input>
                     </form>
-                    
+
+                    <select id="selectType">
+                        <option value="apartment">Apartment</option>
+                        <option value="office">Office</option>
+                    </select>
                 </header>
                 <div className="container-fluid">
                     <div className="grid-container-2">
