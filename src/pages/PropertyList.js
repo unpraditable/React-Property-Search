@@ -8,8 +8,8 @@ class PropertyList extends Component {
 
     state = {
         places: [],
-        lat: -6.173498,
-        lng: 106.728643,
+        lat: 0,
+        lng: 0,
         zoom: 17,
     }
 
@@ -25,28 +25,33 @@ class PropertyList extends Component {
                 data = res.data.place.filter(place => place.type === "office");
             }
 
+            //variables to parse query string from URL into a proper object
+            const queryString = require('query-string');
+            const parsedQueryString = queryString.parse(window.location.search);
+
+            //searchName is the name parameter in the search query on URL
+            const searchTitle = parsedQueryString.name;
+
+            //function to search based on keywords
+            if(searchTitle){
+                data = data.filter(place=>place.name.toLowerCase().includes(searchTitle))
+            }
+
+            if(data){
+                var lat = data[0].address.latitude;
+                var long = data[0].address.longitude;
+            }
+
             //function to set state of places with data
             this.setState({ 
-                places: data
+                places: data,
+                lat: lat,
+                lng: long
             });
         })
     }
     render() {
         let places = this.state.places
-        const position = [this.state.lat, this.state.lng];
-
-        //variables to parse query string from URL into a proper object
-        const queryString = require('query-string');
-        const parsedQueryString = queryString.parse(window.location.search);
-
-        //searchName is the name parameter in the search query on URL
-        const searchTitle = parsedQueryString.name;
-
-        //function to search based on keywords
-        if(searchTitle){
-            places = places.filter(place=>place.name.toLowerCase().includes(searchTitle))
-
-        }
 
         //function to search with search box
         var search = function (e) {
@@ -61,6 +66,9 @@ class PropertyList extends Component {
                 window.location.href=`/office?name=${searchQuery}`;
             }
         }
+
+        const firstPlace = Object.keys(places)[0];
+        const position = [this.state.lat, this.state.lng];
 
         return (
             <div className="property-list-container">
