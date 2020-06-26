@@ -19,7 +19,7 @@ class PropertyDetail extends Component {
         const placeSlug = this.props.match.params.propertyId;
 
         //execute this code to retrieve the data of offices and apartments from the API
-        axios.get(`https://api.jsonbin.io/b/5ef42476e2ce6e3b2c793944`)
+        axios.get(`https://api.npoint.io/e3f7aaeaf56696962f7b`)
         .then(res => {
             //sebenarnya, untuk potongan kode yang ini seharusnya menggunakan find karena hanya butuh satu object saja, tapi karena terus menemui error ketika hendak print nilai nested object, maka jadi pakai cara filter
             let places = res.data.place.filter(place => place.id === parseInt(placeSlug));
@@ -31,7 +31,7 @@ class PropertyDetail extends Component {
 
     }
     render() {
-        var data = this.state.place[0];
+        // var data = this.state.place[0];
         //settings for slick for image carousel
         let slickSettings = {
             dots: false,
@@ -138,7 +138,7 @@ class PropertyDetail extends Component {
                             <Slider {...slickSettings}>
                                 {place.images.others.map(image =>
                                     <div>
-                                        <img src={`${image}`} alt={`${place.name} - Photo`} />
+                                        <img src={`${image}`} alt={`${place.name} - Photo ${place.id}`} />
                                     </div>
                                 )}
                             </Slider>

@@ -1,4 +1,4 @@
-import React, {createRef, Component} from 'react'; 
+import React, {Component} from 'react'; 
 import axios from 'axios';
 import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
@@ -28,7 +28,7 @@ class PropertyList extends Component {
     componentDidMount() {
         var data = [];
         //execute this code to retrieve the data of offices or apartments in regards to the type of the place from the API
-        axios.get(`https://api.jsonbin.io/b/5ef42476e2ce6e3b2c793944`)
+        axios.get(`https://api.npoint.io/e3f7aaeaf56696962f7b`)
         .then(res => {
             if(this.props.type === "apartment") {
                 data = res.data.place.filter(place => place.type === "apartment");
@@ -71,7 +71,7 @@ class PropertyList extends Component {
                 prevUrl = `?name=${searchName}&offset=${prevOffset}`
             }
 
-            if(offset != 0){
+            if(offset !== 0){
                 this.setState({ 
                     isFirstPage: false
                 });
@@ -131,7 +131,6 @@ class PropertyList extends Component {
     }
     render() {
         let places = this.state.places
-        const firstPlace = Object.keys(places)[0];
         const position = [this.state.lat, this.state.lng];
 
         //set array of position in purpose to fit all markers in one map this code is copy-pasted from https://github.com/PaulLeCam/react-leaflet/issues/190, answered by nguyendh2601 

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'; 
-import {Link} from 'react-router-dom';
 
 class PropertyCard extends Component {
     
@@ -19,7 +18,7 @@ class PropertyCard extends Component {
                         </div>
                         <div className="row city-row">
                             <p>
-                                <img className="paper-plane-icon" src={process.env.PUBLIC_URL + '/paper-plane.svg'} />
+                                <img className="paper-plane-icon" src={process.env.PUBLIC_URL + '/paper-plane.svg'} alt="Paper Plane Icon" />
                                 {place.address.city}, {place.address.country}
                             </p>
                         </div>
