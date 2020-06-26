@@ -81,18 +81,31 @@ body{
   display: flex;
   // align-items: center;
   justify-content: center;
-  #searchForm{
-    box-sizing: border-box;
-    height: 30px;
-    width: 250px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border: none;
-    @media only screen and(max-width: 768px) {
-      width: 150px;
-
+  #search-form-container{
+    position: relative;
+    #search-input{
+      padding-left: 25px;
+      box-sizing: border-box;
+      height: 30px;
+      width: 250px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border: none;
+      @media only screen and(max-width: 768px) {
+        width: 150px;
+      }
+    }
+    .search-icon{
+      position: absolute;
+      left: 5px;
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      top: 7px;
+      background-repeat: no-repeat
     }
   }
+  
   select{
     box-sizing: border-box;
     border: none;

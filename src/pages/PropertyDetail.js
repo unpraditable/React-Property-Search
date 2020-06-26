@@ -59,7 +59,8 @@ class PropertyDetail extends Component {
             <div>
                 {this.state.place.map(place =>
                 <div 
-                    className="main-banner" 
+                    className="main-banner"
+                    aria-label="Main Banner" 
                     style={{ backgroundImage: `url(${place.images.primary})` }}
                 ></div>
                 )}

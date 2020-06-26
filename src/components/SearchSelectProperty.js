@@ -20,9 +20,10 @@ class SearchSelectProperty extends Component {
         }
       
         return (
-            <div id="searchSelect" className="search-select">
-                <form  onSubmit={search.bind(this)}>
-                    <input id="searchForm" placeholder="Cari properti Anda di sini..."></input>
+            <div className="search-select">
+                <form id="search-form-container"  onSubmit={search.bind(this)}>
+                    <input id="search-input" placeholder="Cari properti..." />
+                    <i className="search-icon" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/search.svg)` }}></i>
                 </form>
 
                 <select id="selectType">
