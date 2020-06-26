@@ -12,10 +12,10 @@ class SearchSelectProperty extends Component {
 
             e.preventDefault();
             if(selectedType === "apartment"){
-                window.location.href=`/apartment?name=${searchQuery}`;
+                window.location.href=`/React-Property-Search/apartment?name=${searchQuery}`;
             }
             if(selectedType === "office"){
-                window.location.href=`/office?name=${searchQuery}`;
+                window.location.href=`/React-Property-Search/office?name=${searchQuery}`;
             }
         }
       

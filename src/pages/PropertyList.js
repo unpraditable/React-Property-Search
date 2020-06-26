@@ -197,7 +197,7 @@ class PropertyList extends Component {
                                         }}
 
                                         //onclick di sini untuk navigate ke halaman detail ketika diklik. Onclick ini sebenarnya kurang bagus untuk SEO, kecuali jika di GTM ditanam sebuah code untuk tracking ke analitik
-                                        onClick={() => window.location.href=`/place/${marker.id}`}
+                                        onClick={() => window.location.href=`/React-Property-Search/place/${marker.id}`}
                                         
                                     >
                                         <Popup>

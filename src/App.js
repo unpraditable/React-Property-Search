@@ -14,7 +14,7 @@ import {
 
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="/React-Property-Search">
       <div className="App">
         <Route exact path="/">
           <PropertyList type="apartment" />

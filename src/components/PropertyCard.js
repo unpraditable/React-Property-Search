@@ -24,7 +24,7 @@ class PropertyCard extends Component {
                             </p>
                         </div>
                         <div className="row button-row">
-                            <a className="link-button" href={`/place/${place.id}`}>
+                            <a className="link-button" href={`/React-Property-Search/place/${place.id}`}>
                                 Detail
                             </a>
                         </div>
