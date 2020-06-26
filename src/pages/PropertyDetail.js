@@ -22,7 +22,7 @@ class PropertyDetail extends Component {
         //execute this code to retrieve the data of offices and apartments from the API
         axios.get(`https://api.jsonbin.io/b/5ef42476e2ce6e3b2c793944`)
         .then(res => {
-            //sebenarnya, untuk ini seharusnya menggunakan find karena hanya butuh satu object saja, tapi karena terus menemuii error ketika hendak print nilai nested object, maka jadi pakai cara filter
+            //sebenarnya, untuk potongan kode yang ini seharusnya menggunakan find karena hanya butuh satu object saja, tapi karena terus menemui error ketika hendak print nilai nested object, maka jadi pakai cara filter
             let places = res.data.place.filter(place => place.id === parseInt(placeSlug));
 
             this.setState({ 
