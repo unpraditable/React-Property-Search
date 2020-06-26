@@ -1,6 +1,8 @@
 # React-Property-Search
 A mini react app to browse and search property, also show the location on the google maps. Created using self-created dummy API 
 
+API is generated at https://api.jsonbin.io/b/5ef42476e2ce6e3b2c793944 by using jsonbin.io
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
