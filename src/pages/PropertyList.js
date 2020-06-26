@@ -17,7 +17,8 @@ class PropertyList extends Component {
         isLastPage: true,
         nextUrl: "",
         prevUrl: "",
-        searchName : ""
+        searchName : "",
+        isDataEmpty : false
     }
 
     componentDidMount() {
@@ -97,6 +98,12 @@ class PropertyList extends Component {
                 long = data[0].address.longitude;
             }
 
+            if(data <= 0){
+                this.setState({
+                    isDataEmpty: true
+                })
+            }
+
             //function to set state of places with data
             this.setState({ 
                 places: data,
@@ -119,6 +126,7 @@ class PropertyList extends Component {
         // }, 1000);
 
         return (
+            
             <div className="property-list-container">
                 <header className="header-home">
                 {!this.state.searchName
@@ -138,6 +146,8 @@ class PropertyList extends Component {
                 }
                     <SearchSelectProperty />
                 </header>
+                {!this.state.isDataEmpty
+                ?
                 <div className="container-fluid">
                     <div className="grid-container-2 responsive">
                         <div className="grid-item">
@@ -189,6 +199,10 @@ class PropertyList extends Component {
                         </div>
                     </div>
                 </div>
+                :
+                <h2 className="text-centered">Tidak ditemukan apartemen atau kantor</h2>
+                }
+                
             </div>
         )
     }
