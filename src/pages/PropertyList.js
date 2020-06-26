@@ -160,8 +160,16 @@ class PropertyList extends Component {
                                     <a id="prev-button" href={this.state.prevUrl}>Previous</a>
                                 }
 
+                                {this.state.isFirstPage && places.length > 0 &&
+                                    <a id="prev-button" className="disabled">Previous</a>
+                                }
+
                                 {!this.state.isLastPage && 
                                     <a id="next-button" href={this.state.nextUrl}>Next</a>
+                                }
+
+                                {this.state.isLastPage && places.length > 0 &&
+                                    <a id="next-button" className="disabled">Next</a>
                                 }
                             </div>
                             
