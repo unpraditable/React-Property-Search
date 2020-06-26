@@ -19,16 +19,16 @@ function App() {
         <Route exact path="/">
           <PropertyList type="apartment" />
         </Route>
-        <Route exact path="/apartment">
+        <Route exact path="/React-Property-Search/apartment">
           <PropertyList type="apartment" />
         </Route>
-        <Route exact path="/office">
+        <Route exact path="/React-Property-Search/office">
           <PropertyList type="office" />
         </Route>
         
         {/* I use switch for nested routes, so those components will be rendered inclusively and it will be helpful for nested URLs */}
         <Switch>
-          <Route exact path="/place/:propertyId" component={PropertyDetail}>
+          <Route exact path="/React-Property-Search/place/:propertyId" component={PropertyDetail}>
           </Route>
         </Switch>
       </div>
