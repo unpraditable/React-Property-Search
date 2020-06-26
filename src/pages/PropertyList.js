@@ -13,6 +13,8 @@ class PropertyList extends Component {
         lat: -6.194925,
         lng: 106.723789,
         zoom: 17,
+        isFirstPage: true,
+        isLastPage: false
     }
 
     componentDidMount() {
@@ -27,7 +29,7 @@ class PropertyList extends Component {
                 data = res.data.place.filter(place => place.type === "office");
             }
 
-            var offset = 0;
+            let offset = 0;
 
             //variables to parse query string from URL into a proper object
             const queryString = require('query-string');
@@ -42,6 +44,26 @@ class PropertyList extends Component {
             //function to search based on keywords
             if(searchTitle){
                 data = data.filter(place=>place.name.toLowerCase().includes(searchTitle))
+            }
+
+            if(offset != 0){
+                this.setState({ 
+                    isFirstPage: false
+                });
+            } else {
+                this.setState({ 
+                    isFirstPage: true
+                });
+            }
+
+            if(offset + 4 < data.length){
+                this.setState({ 
+                    isLastPage: false
+                });
+            } else {
+                this.setState({ 
+                    isLastPage: true
+                });
             }
 
             data = data.slice(offset, offset+4);
@@ -71,7 +93,6 @@ class PropertyList extends Component {
         return (
             <div className="property-list-container">
                 <header className="header-home">
-                    
                     <h1>Cari Apartemen Impian Anda di Sini!</h1>
                     <SearchSelectProperty />
                 </header>
@@ -82,6 +103,15 @@ class PropertyList extends Component {
                             type={`${this.props.type}`}
                             data={places}
                             />
+                            <div className="pagination-container">
+                                {!this.state.isFirstPage && 
+                                    <a id="prev-button" href="#">Prev</a>
+                                }
+
+                                {!this.state.isLastPage && 
+                                    <a id="next-button" href="#">Next</a>
+                                }
+                            </div>
                             
                         </div>
                         <div className="grid-item">
