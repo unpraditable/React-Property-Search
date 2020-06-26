@@ -124,6 +124,7 @@ class PropertyList extends Component {
                 lng: long,
                 nextUrl: nextUrl,
                 prevUrl: prevUrl,
+                searchName: searchName,
                 arrayOfPositions: arrayOfPositions,
             });
         })
