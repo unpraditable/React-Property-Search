@@ -56,7 +56,14 @@ class PropertyDetail extends Component {
         };
 
         return (
-            <div>
+            <div className="property-detail-container">
+                {this.state.place.map(place =>
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>{place.name}</title>
+                </Helmet>
+                )}
+                
                 {this.state.place.map(place =>
                 <div 
                     className="main-banner"
