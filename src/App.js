@@ -14,21 +14,21 @@ import {
 
 function App() {
   return (
-    <Router basename="/React-Property-Search">
+    <Router basename="/">
       <div className="App">
         <Route exact path="/">
           <PropertyList type="apartment" />
         </Route>
-        <Route exact path="/React-Property-Search/apartment">
+        <Route path="/apartment">
           <PropertyList type="apartment" />
         </Route>
-        <Route exact path="/React-Property-Search/office">
+        <Route path="/office">
           <PropertyList type="office" />
         </Route>
         
         {/* I use switch for nested routes, so those components will be rendered inclusively and it will be helpful for nested URLs */}
         <Switch>
-          <Route exact path="/React-Property-Search/place/:propertyId" component={PropertyDetail}>
+          <Route path="/place/:propertyId" component={PropertyDetail}>
           </Route>
         </Switch>
       </div>

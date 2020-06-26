@@ -1,6 +1,5 @@
 {
-  "homepage": "http://unpraditable.github.io/React-Property-Search",
-  "name": "React-Property-Search",
+  "name": "react-property-search",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
