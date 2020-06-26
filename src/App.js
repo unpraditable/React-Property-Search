@@ -14,9 +14,12 @@ import {
 
 function App() {
   return (
-    <Router basename="/apartment">
+    <Router basename="/">
       <div className="App">
         <Route exact path="/">
+          <PropertyList type="apartment" />
+        </Route>
+        <Route exact path="/apartment">
           <PropertyList type="apartment" />
         </Route>
         <Route exact path="/office">
