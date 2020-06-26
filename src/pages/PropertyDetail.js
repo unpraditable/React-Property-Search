@@ -1,7 +1,6 @@
 import React, {Component} from 'react'; 
 import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
-import { Icon } from "leaflet";
 import axios from 'axios';
 
 // Import css files
@@ -23,7 +22,7 @@ class PropertyDetail extends Component {
         //execute this code to retrieve the data of offices and apartments from the API
         axios.get(`https://api.jsonbin.io/b/5ef42476e2ce6e3b2c793944`)
         .then(res => {
-            //sebenarnya, untuk ini seharusnya menggunakan find karena hanya butuh satu objek saja, tapi karena terus menemuii error ketika hendak print nilai nested object, maka jadi pakai cara filter
+            //sebenarnya, untuk ini seharusnya menggunakan find karena hanya butuh satu object saja, tapi karena terus menemuii error ketika hendak print nilai nested object, maka jadi pakai cara filter
             let places = res.data.place.filter(place => place.id === parseInt(placeSlug));
 
             this.setState({ 
@@ -45,6 +44,15 @@ class PropertyDetail extends Component {
             adaptiveHeight: true,
             slidesToShow: 3,
             slidesToScroll: 1,
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1.25,
+                    arrows: false,
+                  }
+                }
+              ]
         };
 
         return (
@@ -64,7 +72,7 @@ class PropertyDetail extends Component {
 
                     {this.state.place.map(place => 
 
-                        <div className="grid-container-2">
+                        <div className="grid-container-2 responsive">
                         <div className="grid-item">
                             <div className="row">
                                 <h3>Description</h3>

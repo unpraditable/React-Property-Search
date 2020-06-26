@@ -14,7 +14,7 @@ class PropertyList extends Component {
         places: [],
         lat: -6.194925,
         lng: 106.723789,
-        zoom: 17,
+        zoom: 11,
         isFirstPage: true,
         isLastPage: true,
         nextUrl: "",
@@ -127,9 +127,9 @@ class PropertyList extends Component {
                     <SearchSelectProperty />
                 </header>
                 <div className="container-fluid">
-                    <div className="grid-container-2">
+                    <div className="grid-container-2 responsive">
                         <div className="grid-item">
-                            <PropertyCard containerClass="grid-container-2"
+                            <PropertyCard containerClass="grid-container-2 responsive"
                             type={`${this.props.type}`}
                             data={places}
                             />
