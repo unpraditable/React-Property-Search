@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-property-search/static/css/main.e406e999.chunk.css",
+    "main.js": "/react-property-search/static/js/main.279a4675.chunk.js",
+    "main.js.map": "/react-property-search/static/js/main.279a4675.chunk.js.map",
+    "runtime-main.js": "/react-property-search/static/js/runtime-main.733e2663.js",
+    "runtime-main.js.map": "/react-property-search/static/js/runtime-main.733e2663.js.map",
+    "static/css/2.d105ccba.chunk.css": "/react-property-search/static/css/2.d105ccba.chunk.css",
+    "static/js/2.ccdcdcef.chunk.js": "/react-property-search/static/js/2.ccdcdcef.chunk.js",
+    "static/js/2.ccdcdcef.chunk.js.map": "/react-property-search/static/js/2.ccdcdcef.chunk.js.map",
+    "index.html": "/react-property-search/index.html",
+    "precache-manifest.f5221a7658ac6a18295f6b25364bd40a.js": "/react-property-search/precache-manifest.f5221a7658ac6a18295f6b25364bd40a.js",
+    "service-worker.js": "/react-property-search/service-worker.js",
+    "static/css/2.d105ccba.chunk.css.map": "/react-property-search/static/css/2.d105ccba.chunk.css.map",
+    "static/css/main.e406e999.chunk.css.map": "/react-property-search/static/css/main.e406e999.chunk.css.map",
+    "static/js/2.ccdcdcef.chunk.js.LICENSE.txt": "/react-property-search/static/js/2.ccdcdcef.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/react-property-search/static/media/logo.5d5d9eef.svg",
+    "static/media/slick-theme.css": "/react-property-search/static/media/slick.f97e3bbf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.733e2663.js",
+    "static/css/2.d105ccba.chunk.css",
+    "static/js/2.ccdcdcef.chunk.js",
+    "static/css/main.e406e999.chunk.css",
+    "static/js/main.279a4675.chunk.js"
+  ]
+}
