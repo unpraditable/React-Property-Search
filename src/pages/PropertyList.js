@@ -14,7 +14,9 @@ class PropertyList extends Component {
         lng: 106.723789,
         zoom: 17,
         isFirstPage: true,
-        isLastPage: false
+        isLastPage: true,
+        nextUrl: "",
+        prevUrl: ""
     }
 
     componentDidMount() {
@@ -41,9 +43,21 @@ class PropertyList extends Component {
                 offset = parseInt(parsedQueryString.offset);
             }
 
+            let nextOffset = offset + 4;
+            let prevOffset = offset - 4;
+            if(prevOffset < 0){
+                prevOffset = 0;
+            }
+
+            let nextUrl =`?offset=${nextOffset}`;
+            let prevUrl = `?offset=${prevOffset}`;
+
             //function to search based on keywords
             if(searchTitle){
-                data = data.filter(place=>place.name.toLowerCase().includes(searchTitle))
+                data = data.filter(place=>place.name.toLowerCase().includes(searchTitle));
+                nextUrl = `?name=${searchTitle}&offset=${nextOffset}`
+                prevUrl = `?name=${searchTitle}&offset=${prevOffset}`
+
             }
 
             if(offset != 0){
@@ -81,7 +95,9 @@ class PropertyList extends Component {
             this.setState({ 
                 places: data,
                 lat: lat,
-                lng: long
+                lng: long,
+                nextUrl: nextUrl,
+                prevUrl: prevUrl
             });
         })
     }
@@ -105,11 +121,11 @@ class PropertyList extends Component {
                             />
                             <div className="pagination-container">
                                 {!this.state.isFirstPage && 
-                                    <a id="prev-button" href="#">Prev</a>
+                                    <a id="prev-button" href={this.state.prevUrl}>Prev</a>
                                 }
 
                                 {!this.state.isLastPage && 
-                                    <a id="next-button" href="#">Next</a>
+                                    <a id="next-button" href={this.state.nextUrl}>Next</a>
                                 }
                             </div>
                             
