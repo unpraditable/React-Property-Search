@@ -224,18 +224,18 @@ body{
   }
 
   .slick-prev{
-    margin-left: 6px;
+    margin-left: -5px;
   }
 
   .slick-next{
-    margin-right: 6px;
+    margin-right: -5px;
   }
   
   .slick-prev:before, .slick-next:before {
     font-family: 'slick';
-    font-size: 50px;
+    font-size: 35px;
     line-height: 1;
-    opacity: .75;
+    opacity: 1;
     color: #252525;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
