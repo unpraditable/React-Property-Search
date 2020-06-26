@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
-import { Icon } from "leaflet";
-import {latLngBounds} from 'leaflet'
 
 import PropertyCard from "../components/PropertyCard";
 import SearchSelectProperty from "../components/SearchSelectProperty";
@@ -18,7 +16,8 @@ class PropertyList extends Component {
         isFirstPage: true,
         isLastPage: true,
         nextUrl: "",
-        prevUrl: ""
+        prevUrl: "",
+        searchName : ""
     }
 
     componentDidMount() {
@@ -40,11 +39,10 @@ class PropertyList extends Component {
             const parsedQueryString = queryString.parse(window.location.search);
 
             //searchName is the name parameter in the search query on URL
-            const searchTitle = parsedQueryString.name;
+            const searchName = parsedQueryString.name;
             if(parsedQueryString.offset){
                 offset = parseInt(parsedQueryString.offset);
             }
-
 
             //offset options config
             let nextOffset = offset + 4;
@@ -60,13 +58,12 @@ class PropertyList extends Component {
             let prevUrl = `?offset=${prevOffset}`;
 
             //function to search based on keywords
-            if(searchTitle){
-                data = data.filter(place=>place.name.toLowerCase().includes(searchTitle));
+            if(searchName){
+                data = data.filter(place=>place.name.toLowerCase().includes(searchName));
 
                 //re-assign the nextUrl and prevUrl for the pagination if the search is not empty
-                nextUrl = `?name=${searchTitle}&offset=${nextOffset}`
-                prevUrl = `?name=${searchTitle}&offset=${prevOffset}`
-
+                nextUrl = `?name=${searchName}&offset=${nextOffset}`
+                prevUrl = `?name=${searchName}&offset=${prevOffset}`
             }
 
             if(offset != 0){
@@ -106,7 +103,8 @@ class PropertyList extends Component {
                 lat: lat,
                 lng: long,
                 nextUrl: nextUrl,
-                prevUrl: prevUrl
+                prevUrl: prevUrl,
+                searchName: searchName
             });
         })
     }
@@ -123,7 +121,21 @@ class PropertyList extends Component {
         return (
             <div className="property-list-container">
                 <header className="header-home">
-                    <h1>Cari Apartemen Impian Anda di Sini!</h1>
+                {!this.state.searchName
+                    ?   <Helmet>
+                            <meta charSet="utf-8" />
+                            <title>Situs Pencari Apartemen dan Kantor Terpercaya</title>
+                        </Helmet>
+                    :
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>Hasil pencarian {this.props.type} "{this.state.searchName}</title>
+                    </Helmet>
+                }
+                {!this.state.searchName
+                    ? <h1>Cari Apartemen & Kantor Impian Anda di Sini!</h1>
+                : <h1>Hasil pencarian {this.props.type} "{this.state.searchName}"</h1>
+                }
                     <SearchSelectProperty />
                 </header>
                 <div className="container-fluid">
@@ -178,7 +190,6 @@ class PropertyList extends Component {
                     </div>
                 </div>
             </div>
-            
         )
     }
 }

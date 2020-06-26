@@ -2,6 +2,7 @@
 
 $blue : #597cc2;
 $darkBlue : darken($blue, 30%);
+$green: #59c296;
 
 body{
   background: white;
@@ -103,11 +104,11 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  margin: 30px 0 0;
   a{
     text-decoration: none;
     color: white;
-    background-color: $blue;
+    background-color: $green;
     margin-right: 10px;
     padding: 6px 10px;
     border-radius: 4px;

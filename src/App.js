@@ -25,7 +25,7 @@ function App() {
         
         {/* I use switch for nested routes, so those components will be rendered inclusively and it will be helpful for nested URLs */}
         <Switch>
-          <Route path="/place/:propertyId" component={PropertyDetail}>
+          <Route exact path="/place/:propertyId" component={PropertyDetail}>
           </Route>
         </Switch>
       </div>
