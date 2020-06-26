@@ -153,6 +153,7 @@ class PropertyList extends Component {
                                         onMouseOut={(e) => {
                                             e.target.closePopup();
                                         }}
+                                        onClick={() => window.location.href=`/place/${marker.id}`}
                                         
                                     >
                                         <Popup>
