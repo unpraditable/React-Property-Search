@@ -152,7 +152,7 @@ class PropertyList extends Component {
                 }
                 {!this.state.searchName
                     ? <h1>Cari Apartemen & Kantor Impian Anda di Sini!</h1>
-                : <h1>Hasil pencarian {this.props.type} "{this.state.searchName}"</h1>
+                    : <h1>Hasil pencarian {this.props.type} "{this.state.searchName}"</h1>
                 }
                     <SearchSelectProperty />
                 </header>

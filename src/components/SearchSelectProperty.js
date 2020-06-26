@@ -7,8 +7,8 @@ class SearchSelectProperty extends Component {
     render() {
         //function to search with search box
         var search = function (e) {
-            let searchQuery = document.getElementById('searchForm').value;
-            let selectedType = document.getElementById('selectType').value;
+            let searchQuery = document.getElementById('search-input').value;
+            let selectedType = document.getElementById('select-type').value;
 
             e.preventDefault();
             if(selectedType === "apartment"){
@@ -21,12 +21,12 @@ class SearchSelectProperty extends Component {
       
         return (
             <div className="search-select">
-                <form id="search-form-container"  onSubmit={search.bind(this)}>
+                <form id="search-form-container" onSubmit={search.bind(this)}>
                     <input id="search-input" placeholder="Cari properti..." />
                     <i className="search-icon" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/search.svg)` }}></i>
                 </form>
 
-                <select id="selectType">
+                <select id="select-type">
                     <option value="apartment">Apartment</option>
                     <option value="office">Office</option>
                 </select>
