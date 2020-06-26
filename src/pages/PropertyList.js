@@ -1,10 +1,11 @@
-import React, {Component} from 'react'; 
+import React, {createRef, Component} from 'react'; 
 import axios from 'axios';
 import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
-
 import PropertyCard from "../components/PropertyCard";
 import SearchSelectProperty from "../components/SearchSelectProperty";
+
+const Leaflet = window.L;
 
 class PropertyList extends Component {
 
@@ -12,13 +13,16 @@ class PropertyList extends Component {
         places: [],
         lat: -6.194925,
         lng: 106.723789,
-        zoom: 11,
+        zoom: 15,
         isFirstPage: true,
         isLastPage: true,
         nextUrl: "",
         prevUrl: "",
         searchName : "",
-        isDataEmpty : false
+        isDataEmpty : false,
+
+        //arrayOfPositions must be set on default value, otherwise, the code won't work. This value is random value
+        arrayOfPositions: [-9.852507, -15.351563],
     }
 
     componentDidMount() {
@@ -104,6 +108,15 @@ class PropertyList extends Component {
                 })
             }
 
+            //set array of position in purpose to fit all markers in one map
+            let arrayOfPositions = []
+
+            for(let i=0;i<data.length;i++) {
+                let coordinateArray = [];
+                coordinateArray.push(data[i].address.latitude, data[i].address.longitude)
+                arrayOfPositions.push(coordinateArray)
+            }
+
             //function to set state of places with data
             this.setState({ 
                 places: data,
@@ -111,7 +124,7 @@ class PropertyList extends Component {
                 lng: long,
                 nextUrl: nextUrl,
                 prevUrl: prevUrl,
-                searchName: searchName
+                arrayOfPositions: arrayOfPositions,
             });
         })
     }
@@ -120,11 +133,8 @@ class PropertyList extends Component {
         const firstPlace = Object.keys(places)[0];
         const position = [this.state.lat, this.state.lng];
 
-        // Fit all markers after 1 second.
-        // setTimeout(function () {
-        //     map.fitBounds(fg.getBounds());
-        // }, 1000);
-
+        //set array of position in purpose to fit all markers in one map this code is copy-pasted from https://github.com/PaulLeCam/react-leaflet/issues/190, answered by nguyendh2601 
+        const bounds = Leaflet.latLngBounds([this.state.arrayOfPositions]);
         return (
             
             <div className="property-list-container">
@@ -163,13 +173,11 @@ class PropertyList extends Component {
                                 {!this.state.isLastPage && 
                                     <a id="next-button" href={this.state.nextUrl}>Next</a>
                                 }
-
-                                
                             </div>
                             
                         </div>
                         <div className="grid-item">
-                            <Map center={position} zoom={this.state.zoom} >
+                            <Map center={position} zoom={this.state.zoom} ref={this.mapRef} bounds={bounds}>
                                 <TileLayer
                                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -197,7 +205,7 @@ class PropertyList extends Component {
                                         </Popup>
                                     </Marker>
                                 )}
-                            </Map>
+                            </Map>                            
                         </div>
                     </div>
                 </div>
