@@ -27,17 +27,24 @@ class PropertyList extends Component {
                 data = res.data.place.filter(place => place.type === "office");
             }
 
+            var offset = 0;
+
             //variables to parse query string from URL into a proper object
             const queryString = require('query-string');
             const parsedQueryString = queryString.parse(window.location.search);
 
             //searchName is the name parameter in the search query on URL
             const searchTitle = parsedQueryString.name;
+            if(parsedQueryString.offset){
+                offset = parseInt(parsedQueryString.offset);
+            }
 
             //function to search based on keywords
             if(searchTitle){
                 data = data.filter(place=>place.name.toLowerCase().includes(searchTitle))
             }
+
+            data = data.slice(offset, offset+4);
 
             //set lat and long default value to a proper value
             var lat = -6.194925
