@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-
 class PropertyDetail extends Component {
     state = {
         place: [],
@@ -32,9 +31,8 @@ class PropertyDetail extends Component {
 
     }
     render() {
-
         var data = this.state.place[0];
-
+        //settings for slick for image carousel
         let slickSettings = {
             dots: false,
             auto: false,
@@ -133,7 +131,7 @@ class PropertyDetail extends Component {
                     </div>
                     )}
 
-
+                    {/* rendering carousel */}
                     {this.state.place.map(place =>
                         <div className="slider-wrapper">
                             <h2>Images</h2>
