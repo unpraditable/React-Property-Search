@@ -1,4 +1,5 @@
 import React, {Component} from 'react'; 
+import {Link} from 'react-router-dom';
 
 class PropertyCard extends Component {
     
@@ -23,9 +24,9 @@ class PropertyCard extends Component {
                             </p>
                         </div>
                         <div className="row button-row">
-                            <a className="link-button" href={`place/${place.id}`}>
+                            <Link className="link-button" to={`place/${place.id}`}>
                                 Detail
-                            </a>
+                            </Link>
                         </div>
                     </li>
                 )}

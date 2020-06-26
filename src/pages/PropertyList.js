@@ -43,18 +43,25 @@ class PropertyList extends Component {
                 offset = parseInt(parsedQueryString.offset);
             }
 
+
+            //offset options config
             let nextOffset = offset + 4;
             let prevOffset = offset - 4;
+
+            //handling prevOffset, so the prevOffset will not be out of bounds
             if(prevOffset < 0){
                 prevOffset = 0;
             }
 
+            //assign the nextUrl and prevUrl
             let nextUrl =`?offset=${nextOffset}`;
             let prevUrl = `?offset=${prevOffset}`;
 
             //function to search based on keywords
             if(searchTitle){
                 data = data.filter(place=>place.name.toLowerCase().includes(searchTitle));
+
+                //re-assign the nextUrl and prevUrl for the pagination if the search is not empty
                 nextUrl = `?name=${searchTitle}&offset=${nextOffset}`
                 prevUrl = `?name=${searchTitle}&offset=${prevOffset}`
 
@@ -121,7 +128,7 @@ class PropertyList extends Component {
                             />
                             <div className="pagination-container">
                                 {!this.state.isFirstPage && 
-                                    <a id="prev-button" href={this.state.prevUrl}>Prev</a>
+                                    <a id="prev-button" href={this.state.prevUrl}>Previous</a>
                                 }
 
                                 {!this.state.isLastPage && 
