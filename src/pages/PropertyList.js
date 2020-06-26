@@ -3,6 +3,8 @@ import axios from 'axios';
 import {Helmet} from "react-helmet";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
+import {latLngBounds} from 'leaflet'
+
 import PropertyCard from "../components/PropertyCard";
 import SearchSelectProperty from "../components/SearchSelectProperty";
 
@@ -113,6 +115,11 @@ class PropertyList extends Component {
         const firstPlace = Object.keys(places)[0];
         const position = [this.state.lat, this.state.lng];
 
+        // Fit all markers after 1 second.
+        // setTimeout(function () {
+        //     map.fitBounds(fg.getBounds());
+        // }, 1000);
+
         return (
             <div className="property-list-container">
                 <header className="header-home">
@@ -147,12 +154,16 @@ class PropertyList extends Component {
                                 {places.map(marker =>
                                     <Marker 
                                         position={[marker.address.latitude, marker.address.longitude]}
+
+                                        //show and unshow popup when hovered
                                         onMouseOver={(e) => {
                                             e.target.openPopup();
                                         }}
                                         onMouseOut={(e) => {
                                             e.target.closePopup();
                                         }}
+
+                                        //onclick di sini untuk navigate ke halaman detail ketika diklik. Onclick ini sebenarnya kurang bagus untuk SEO, kecuali jika di GTM ditanam sebuah code untuk tracking ke analitik
                                         onClick={() => window.location.href=`/place/${marker.id}`}
                                         
                                     >

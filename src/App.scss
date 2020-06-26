@@ -3,6 +3,10 @@
 $blue : #597cc2;
 $darkBlue : darken($blue, 30%);
 
+body{
+  background: white;
+}
+
 //reusable components
 .container {
   max-width: 960px;
@@ -197,4 +201,44 @@ $darkBlue : darken($blue, 30%);
     border-radius: 4px;
     text-decoration: none;
   }
+}
+
+//modification of slick slide components
+.slider-wrapper{
+  margin: 30px 0;
+  .slick-slider {
+    img{
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: calc(100% - 15px);
+      height: 300px;
+      object-fit: cover;
+    }
+    
+  }
+
+  .slick-prev, .slick-next {
+    z-index: 1;
+    width: auto;
+  }
+
+  .slick-prev{
+    margin-left: 6px;
+  }
+
+  .slick-next{
+    margin-right: 6px;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 50px;
+    line-height: 1;
+    opacity: .75;
+    color: #252525;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
 }

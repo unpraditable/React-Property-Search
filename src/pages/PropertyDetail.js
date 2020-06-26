@@ -4,11 +4,19 @@ import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 import axios from 'axios';
 
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+
 class PropertyDetail extends Component {
     state = {
         place: [],
         zoom: 16,
     }
+
+    
     componentDidMount() {
         const placeSlug = this.props.match.params.propertyId;
 
@@ -16,7 +24,7 @@ class PropertyDetail extends Component {
         axios.get(`https://api.jsonbin.io/b/5ef42476e2ce6e3b2c793944`)
         .then(res => {
             //sebenarnya, untuk ini seharusnya menggunakan find karena hanya butuh satu objek saja, tapi karena terus menemuii error ketika hendak print nilai nested object, maka jadi pakai cara filter
-            var places = res.data.place.filter(place => place.id === parseInt(placeSlug));
+            let places = res.data.place.filter(place => place.id === parseInt(placeSlug));
 
             this.setState({ 
                 place: places,
@@ -27,6 +35,17 @@ class PropertyDetail extends Component {
     render() {
 
         var data = this.state.place[0];
+
+        let slickSettings = {
+            dots: false,
+            auto: false,
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            adaptiveHeight: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+        };
 
         return (
             <div>
@@ -96,7 +115,21 @@ class PropertyDetail extends Component {
                             </div>
                         </div>
                     </div>
-                    )}                    
+                    )}
+
+
+                    {this.state.place.map(place =>
+                        <div className="slider-wrapper">
+                            <h2>Images</h2>
+                            <Slider {...slickSettings}>
+                                {place.images.others.map(image =>
+                                    <div>
+                                        <img src={`${image}`} alt={`${place.name} - Photo`} />
+                                    </div>
+                                )}
+                            </Slider>
+                        </div>                            
+                    )}              
                 </div>
             </div>
             
