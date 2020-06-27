@@ -64,7 +64,7 @@ class PropertyList extends Component {
 
             //function to search based on keywords
             if(searchName){
-                data = data.filter(place=>place.name.toLowerCase().includes(searchName));
+                data = data.filter(place=>place.name.toLowerCase().includes(searchName.toLowerCase()));
 
                 //re-assign the nextUrl and prevUrl for the pagination if the search is not empty
                 nextUrl = `?name=${searchName}&offset=${nextOffset}`
